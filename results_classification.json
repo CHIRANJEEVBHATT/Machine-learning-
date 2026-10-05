@@ -1,0 +1,110 @@
+{
+  "task": "classification",
+  "n_train": 4674,
+  "n_test": 1169,
+  "thresholds": [
+    4.25,
+    7.95
+  ],
+  "best_params": {
+    "logreg": {
+      "model__C": 100
+    },
+    "svm": {
+      "model__C": 10.0,
+      "model__gamma": "scale"
+    }
+  },
+  "results": [
+    {
+      "Model": "Logistic Regression",
+      "Accuracy": 0.8357570573139436,
+      "Precision (macro)": 0.8402721076785733,
+      "Recall (macro)": 0.8355853764374479,
+      "F1 (macro)": 0.83691779956564,
+      "ROC-AUC (OvR)": 0.9551176651416985,
+      "CV accuracy": 0.8609291300713394
+    },
+    {
+      "Model": "SVM (RBF kernel)",
+      "Accuracy": 0.853721129170231,
+      "Precision (macro)": 0.8566537027410012,
+      "Recall (macro)": 0.8535178757504517,
+      "F1 (macro)": 0.854341379287304,
+      "ROC-AUC (OvR)": 0.961594185073526,
+      "CV accuracy": 0.8737679350502126
+    }
+  ],
+  "confusion": {
+    "Logistic Regression": [
+      [
+        323,
+        72,
+        0
+      ],
+      [
+        45,
+        307,
+        31
+      ],
+      [
+        1,
+        43,
+        347
+      ]
+    ],
+    "SVM (RBF kernel)": [
+      [
+        334,
+        60,
+        1
+      ],
+      [
+        32,
+        314,
+        37
+      ],
+      [
+        2,
+        39,
+        350
+      ]
+    ]
+  },
+  "per_class": {
+    "Logistic Regression": {
+      "Low": {
+        "precision": 0.8753,
+        "recall": 0.8177,
+        "f1": 0.8455
+      },
+      "Mid": {
+        "precision": 0.7275,
+        "recall": 0.8016,
+        "f1": 0.7627
+      },
+      "High": {
+        "precision": 0.918,
+        "recall": 0.8875,
+        "f1": 0.9025
+      }
+    },
+    "SVM (RBF kernel)": {
+      "Low": {
+        "precision": 0.9076,
+        "recall": 0.8456,
+        "f1": 0.8755
+      },
+      "Mid": {
+        "precision": 0.7603,
+        "recall": 0.8198,
+        "f1": 0.7889
+      },
+      "High": {
+        "precision": 0.9021,
+        "recall": 0.8951,
+        "f1": 0.8986
+      }
+    }
+  }
+}
