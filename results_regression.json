@@ -1,0 +1,90 @@
+{
+  "task": "regression",
+  "n_train": 4674,
+  "n_test": 1169,
+  "best_alpha": 0.7880462815669912,
+  "results": [
+    {
+      "Model": "Linear Regression (OLS)",
+      "R2 (\u20b9 scale)": 0.8134770272251423,
+      "R2 (log scale)": 0.9204997451912691,
+      "RMSE (Lakh)": 5.012277298717085,
+      "MAE (Lakh)": 1.962563121578021,
+      "MAPE (%)": 19.431697987106,
+      "CV R2 (log, 5-fold)": 0.925402099093237
+    },
+    {
+      "Model": "Ridge Regression",
+      "R2 (\u20b9 scale)": 0.8104503802897278,
+      "R2 (log scale)": 0.9199174403575063,
+      "RMSE (Lakh)": 5.052779941772874,
+      "MAE (Lakh)": 1.969549623199904,
+      "MAPE (%)": 19.456102434062057,
+      "CV R2 (log, 5-fold)": 0.9254336501688842
+    }
+  ],
+  "top_positive": {
+    "Fuel_Type_Electric": 0.371,
+    "Brand_Mercedes-Benz": 0.402,
+    "Brand_Jaguar": 0.42,
+    "Brand_Land Rover": 0.663,
+    "Brand_Mini": 0.77
+  },
+  "top_negative": {
+    "Brand_Tata": -0.489,
+    "Brand_Datsun": -0.474,
+    "Brand_Chevrolet": -0.402,
+    "Brand_Fiat": -0.327,
+    "Fuel_Type_Petrol": -0.317
+  },
+  "eda": {
+    "rows": 5843,
+    "median_price": 5.75,
+    "mean_price": 9.646470990929318,
+    "skew_raw": 3.30729741841621,
+    "skew_log": 0.75173437391203,
+    "corr_with_price": {
+      "Age": -0.3,
+      "Kilometers_Driven": -0.175,
+      "Mileage": -0.334,
+      "Engine": 0.656,
+      "Power": 0.772,
+      "Seats": 0.054,
+      "log_KM": -0.186
+    },
+    "median_by_fuel": {
+      "Diesel": 7.85,
+      "Electric": 12.88,
+      "Petrol": 4.21
+    },
+    "median_by_trans": {
+      "Automatic": 16.0,
+      "Manual": 4.65
+    },
+    "median_by_owner": {
+      "First": 5.99,
+      "Fourth & Above": 3.12,
+      "Second": 4.5,
+      "Third": 2.95
+    },
+    "median_by_brand_top": {
+      "Chevrolet": 2.5,
+      "Tata": 2.9,
+      "Maruti": 4.25,
+      "Nissan": 4.5,
+      "Hyundai": 4.76,
+      "Volkswagen": 4.85,
+      "Honda": 4.95,
+      "Ford": 5.38,
+      "Renault": 5.49,
+      "Skoda": 6.0,
+      "Mahindra": 7.65,
+      "Toyota": 11.0,
+      "BMW": 21.0,
+      "Audi": 23.5,
+      "Mercedes-Benz": 24.23,
+      "Jaguar": 31.9,
+      "Land Rover": 35.0
+    }
+  }
+}
